@@ -25,7 +25,7 @@
 ###############################################################################
 
 
-- hosts: all
+- hosts: '{{target|default("all")}}'
   vars:
     var_sshd_set_keepalive: !!str 0
   tasks:

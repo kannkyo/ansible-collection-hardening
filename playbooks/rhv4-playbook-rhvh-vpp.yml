@@ -46,7 +46,7 @@
 ###############################################################################
 
 
-- hosts: all
+- hosts: '{{target|default("all")}}'
   vars:
     var_system_crypto_policy: !!str FIPS:OSPP
     var_password_pam_unix_remember: !!str 5

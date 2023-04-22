@@ -33,7 +33,7 @@
 ###############################################################################
 
 
-- hosts: all
+- hosts: '{{target|default("all")}}'
   vars:
     var_audit_failure_mode: !!str 2
     var_auditd_flush: !!str data

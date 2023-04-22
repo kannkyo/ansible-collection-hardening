@@ -29,7 +29,7 @@
 ###############################################################################
 
 
-- hosts: all
+- hosts: '{{target|default("all")}}'
   vars:
     var_auditd_flush: !!str incremental_async
     sysctl_kernel_kptr_restrict_value: !!str 1

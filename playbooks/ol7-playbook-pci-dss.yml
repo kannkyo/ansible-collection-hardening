@@ -25,7 +25,7 @@
 ###############################################################################
 
 
-- hosts: all
+- hosts: '{{target|default("all")}}'
   vars:
     inactivity_timeout_value: !!str 900
     var_password_pam_unix_remember: !!str 4

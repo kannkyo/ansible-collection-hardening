@@ -31,7 +31,7 @@
 ###############################################################################
 
 
-- hosts: all
+- hosts: '{{target|default("all")}}'
   vars:
     var_system_crypto_policy: !!str FIPS:OSPP
     var_authselect_profile: !!str minimal

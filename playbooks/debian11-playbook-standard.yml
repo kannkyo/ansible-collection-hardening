@@ -27,7 +27,7 @@
 ###############################################################################
 
 
-- hosts: all
+- hosts: '{{target|default("all")}}'
   vars:
   tasks:
     - name: Ensure auditd is installed

@@ -33,7 +33,7 @@
 ###############################################################################
 
 
-- hosts: all
+- hosts: '{{target|default("all")}}'
   vars:
     var_system_crypto_policy: !!str FIPS
     var_audit_failure_mode: !!str 2

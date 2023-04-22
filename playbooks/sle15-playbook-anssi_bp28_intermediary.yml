@@ -34,7 +34,7 @@
 ###############################################################################
 
 
-- hosts: all
+- hosts: '{{target|default("all")}}'
   vars:
     var_sudo_passwd_timeout: !!str 1
     var_sudo_umask: !!str 0027

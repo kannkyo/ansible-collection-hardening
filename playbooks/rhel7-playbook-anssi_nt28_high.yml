@@ -29,7 +29,7 @@
 ###############################################################################
 
 
-- hosts: all
+- hosts: '{{target|default("all")}}'
   vars:
     var_aide_scan_notification_email: !!str root@localhost
     var_sudo_passwd_timeout: !!str 1

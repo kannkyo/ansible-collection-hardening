@@ -25,7 +25,7 @@
 ###############################################################################
 
 
-- hosts: all
+- hosts: '{{target|default("all")}}'
   vars:
     var_system_crypto_policy: !!str DEFAULT
     var_password_pam_unix_remember: !!str 4

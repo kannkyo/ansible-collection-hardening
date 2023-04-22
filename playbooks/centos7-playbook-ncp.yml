@@ -48,7 +48,7 @@
 ###############################################################################
 
 
-- hosts: all
+- hosts: '{{target|default("all")}}'
   vars:
     var_aide_scan_notification_email: !!str root@localhost
     inactivity_timeout_value: !!str 900

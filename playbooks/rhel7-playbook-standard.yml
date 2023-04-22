@@ -27,7 +27,7 @@
 ###############################################################################
 
 
-- hosts: all
+- hosts: '{{target|default("all")}}'
   vars:
   tasks:
     - name: 'Set fact: Package manager reinstall command (dnf)'

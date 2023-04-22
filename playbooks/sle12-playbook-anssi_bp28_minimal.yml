@@ -34,7 +34,7 @@
 ###############################################################################
 
 
-- hosts: all
+- hosts: '{{target|default("all")}}'
   vars:
     var_password_pam_tally2: !!str 5
     var_password_pam_dcredit: !!str -1

@@ -40,7 +40,7 @@
 ###############################################################################
 
 
-- hosts: all
+- hosts: '{{target|default("all")}}'
   vars:
     var_system_crypto_policy: !!str FIPS
     inactivity_timeout_value: !!str 900

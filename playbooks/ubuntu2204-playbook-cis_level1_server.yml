@@ -26,7 +26,7 @@
 ###############################################################################
 
 
-- hosts: all
+- hosts: '{{target|default("all")}}'
   vars:
     var_sudo_logfile: !!str /var/log/sudo.log
     var_sudo_timestamp_timeout: !!str 15
